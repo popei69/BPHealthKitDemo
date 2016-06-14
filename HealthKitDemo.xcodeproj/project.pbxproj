@@ -12,6 +12,7 @@
 		1403C53E1D109B7D007AF22E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1403C53C1D109B7D007AF22E /* Main.storyboard */; };
 		1403C5401D109B7D007AF22E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1403C53F1D109B7D007AF22E /* Assets.xcassets */; };
 		1403C5431D109B7D007AF22E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1403C5411D109B7D007AF22E /* LaunchScreen.storyboard */; };
+		1403C54C1D109BD7007AF22E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1403C54B1D109BD7007AF22E /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		1403C53F1D109B7D007AF22E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1403C5421D109B7D007AF22E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1403C5441D109B7D007AF22E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1403C54A1D109BD7007AF22E /* HealthKitDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HealthKitDemo.entitlements; sourceTree = "<group>"; };
+		1403C54B1D109BD7007AF22E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1403C54C1D109BD7007AF22E /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +42,7 @@
 		1403C52C1D109B7D007AF22E = {
 			isa = PBXGroup;
 			children = (
+				1403C54B1D109BD7007AF22E /* HealthKit.framework */,
 				1403C5371D109B7D007AF22E /* HealthKitDemo */,
 				1403C5361D109B7D007AF22E /* Products */,
 			);
@@ -54,6 +59,7 @@
 		1403C5371D109B7D007AF22E /* HealthKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				1403C54A1D109BD7007AF22E /* HealthKitDemo.entitlements */,
 				1403C5381D109B7D007AF22E /* AppDelegate.swift */,
 				1403C53A1D109B7D007AF22E /* ViewController.swift */,
 				1403C53C1D109B7D007AF22E /* Main.storyboard */,
@@ -96,6 +102,12 @@
 				TargetAttributes = {
 					1403C5341D109B7D007AF22E = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = XG3URJ46HG;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -251,6 +263,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HealthKitDemo/HealthKitDemo.entitlements;
 				INFOPLIST_FILE = HealthKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.benoitpasquier.HealthKitDemo;
@@ -262,6 +275,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HealthKitDemo/HealthKitDemo.entitlements;
 				INFOPLIST_FILE = HealthKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.benoitpasquier.HealthKitDemo;
